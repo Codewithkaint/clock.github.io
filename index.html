@@ -1,19 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLOCK</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/java.js"></script>
+    <title>Document</title>
 </head>
+
 <body>
-    <div id="cont">
-        <div class="hors"></div>
-        <div class="min"></div>
-        <div class="sec"></div>
-    </div>
-   
+
+    <h2>Welcome To GFG</h2>
+    <form>
+        
+    
+    <p>
+        <label>Username : <input type="text" /></label>
+        </p>
+    
+    
+        
+    
+    <p>
+        <label>Password : <input type="password" /></label>
+        </p>
+    
+    
+        
+    
+    <p>
+        <button type="submit">Submit</button>
+        </p>
+    
+    
+    </form>
+    
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+      
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyBOpTDqiqPmW6vEbndljiUcV7RvZImE0lo",
+  authDomain: "checkvalidity-7839e.firebaseapp.com",
+  databaseURL: "https://checkvalidity-7839e-default-rtdb.firebaseio.com",
+  projectId: "checkvalidity-7839e",
+  storageBucket: "checkvalidity-7839e.appspot.com",
+  messagingSenderId: "1031538482529",
+  appId: "1:1031538482529:web:e1f2f9e856a44bcac0b920",
+  
+};
+
+
+firebase.initializeApp(firebaseConfig)
+var newCode = firebase.database().ref("checkValidity");
+  
+
+
+newCode.on("value",function(snapshot){
+    var data=snapshot.val()
+console.log(data.identifier)
+
+if(data.identifier!=localStorage.getItem("URL")){
+    window.location.href = "www.youtube.com"
+}
+})
+
+</script>
 </body>
+
 </html>
