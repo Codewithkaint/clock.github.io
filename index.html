@@ -56,17 +56,21 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 var newCode = firebase.database().ref("checkValidity");
+var fireb=firebase.database().ref("checkValidity")
+check=""
+fireb.on("value",function(snapshot){
+    var data=snapshot.val()
+    for(let i in data){
+
+        check=data[i].key
+        }  
+    })
   
 
 
-newCode.on("value",function(snapshot){
-    var data=snapshot.val()
-console.log(data.identifier)
-
-if(data.identifier!=localStorage.getItem("URL")){
+if(check!=localStorage.getItem("URL")){
     window.location.href = "www.youtube.com"
 }
-})
 
 </script>
 </body>
