@@ -10,7 +10,7 @@
 
 <body>
 
-    <h2>Welcome  f </h2>
+    <h2>Welcome To GFG</h2>
     <form>
         
     
@@ -65,12 +65,14 @@ fireb.on("value",function(snapshot){
         check=data[i].key
         }  
     })
-  check=window.location.href+check
+  
 
-
-if(check!=localStorage.getItem("URL")){
+setTimeout(() => {
+    if(check!==localStorage.getItem("URL")){
     window.location.href = "www.youtube.com"
 }
+    
+}, 3000);
 
 </script>
 </body>
