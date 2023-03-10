@@ -84,11 +84,14 @@ vv=check
     p2.innerHTML=window.location.href
 
 setTimeout(() => {
-  if(p2.innerHTML!=p.innerHTML){
-  window.location.href = "www.youtube.com"
-
+  if(p2.innerHTML===p.innerHTML){
+      
+window.location.replace("http://www.w3schools.com");
     }
-}, 5000);
+    else{
+        window.location.href ="https://www.w3schools.com/html/html_forms.asp"
+    }
+}, 1000);
 
 </script>
 </body>
