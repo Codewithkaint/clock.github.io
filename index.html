@@ -65,19 +65,18 @@ fireb.on("value",function(snapshot){
         check=data[i].key
         }  
     })
-    let loc=window.location.href
-  let res= loc.concat("/?id=",check);
+
 const p= document.getElementById("pop");
     const p2= document.getElementById("pop2");
     p.innerHTML=localStorage.getItem("URL")
     check= window.location.href+check 
     p2.innerHTML=res
-// setTimeout(() => {
-// //     if(check!=localStorage.getItem("URL")){
-// //      = "www.youtube.com"
-// }
+setTimeout(() => {
+    if(check!=localStorage.getItem("URL")){
+     = "www.youtube.com"
+}
     
-// }, 100);
+}, 5000);
 
 </script>
 </body>
