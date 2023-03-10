@@ -60,12 +60,15 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 var newCode = firebase.database().ref("checkValidity");
 var fireb=firebase.database().ref("checkValidity")
+const p2= document.getElementById("pop2");
+    
+const p= document.getElementById("pop");
 let check="as"
 fireb.on("value",function(snapshot){
     var data=snapshot.val()
     for(let i in data){
 
-        check=data[i].key
+      p.innerHTML=data[i].key
         }  
     })
 let i=1
@@ -75,9 +78,8 @@ if(x==2){
 vv=check
     x=3
 }
-const p= document.getElementById("pop");
-    const p2= document.getElementById("pop2");
-    p.innerHTML=check
+    
+  
     
     p2.innerHTML=window.location.href
 
