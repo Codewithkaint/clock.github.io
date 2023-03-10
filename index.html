@@ -10,7 +10,7 @@
 
 <body>
 
-    <h2>Wel</h2>
+    <h2>Welp</h2>
     <form>
         <p id="pop"></p>
             <p id="pop2"></p>
@@ -65,15 +65,16 @@ fireb.on("value",function(snapshot){
         check=data[i].key
         }  
     })
-  
+    let loc=window.location.href
+  let res= loc.concat("/?id=",check);
 const p= document.getElementById("pop");
     const p2= document.getElementById("pop2");
     p.innerHTML=localStorage.getItem("URL")
     check= window.location.href+check 
-    p2.innerHTML=check
+    p2.innerHTML=res
 // setTimeout(() => {
 // //     if(check!=localStorage.getItem("URL")){
-// //     window.location.href = "www.youtube.com"
+// //      = "www.youtube.com"
 // }
     
 // }, 100);
