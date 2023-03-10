@@ -76,14 +76,13 @@ const p= document.getElementById("pop");
     p.innerHTML=vv
     
     p2.innerHTML=window.location.href
-if(i==1){
-    if(check!=vv){
+
+setTimeout(() => {
+  if(check!=vv){
   window.location.href = "www.youtube.com"
 
     }
-    i=2
-}
-
+}, 1000);
 
 </script>
 </body>
