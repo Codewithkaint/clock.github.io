@@ -7,36 +7,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+  *{
+    margin: 0;
+   padding: 0;
+  }
+  #box{
+height: 100vh;
+width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+  }
+  #pop{
+    display: none;
+  }
+  #pop2{
+    display: none;
+  }
+  .loader {
+    border: 2rem solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 2rem solid blue;
+  border-right: 2rem solid green;
+  border-bottom:2rem solid red;
+  border-left: 2rem solid pink;
+  width: 25rem;
+  height: 25rem;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
 
 <body>
+<div id="box">
+  
+  <div class="loader"></div>
+  
+  <p id="pop"></p>
+ 
 
-    <h2>AqL</h2>
-    <form>
-    <h2>11</h2>
-        <p id="pop"></p>
-        <h2>2</h2>
-     
-        <p id="pop2"></p>
-    <p>
-        <label>Username : <input type="text" /></label>
-        </p>
+  <p id="pop2"></p>
+</div>
+
+    
+       
     
     
         
     
-    <p>
-        <label>Password : <input type="password" /></label>
-        </p>
     
     
         
     
-    <p>
-        <button type="submit">Submit</button>
-        </p>
-    
-    
-    </form>
+   
     
 
 
