@@ -10,7 +10,7 @@
 
 <body>
 
-    <h2>Welqwp</h2>
+    <h2>BC</h2>
     <form>
         <p id="pop"></p>
             <p id="pop2"></p>
@@ -66,13 +66,18 @@ fireb.on("value",function(snapshot){
         }  
     })
 let i=1
+let x=2
+if(x==2){
+vv=localStorage.getItem("URL")
+    x=3
+}
 const p= document.getElementById("pop");
     const p2= document.getElementById("pop2");
-    p.innerHTML=localStorage.getItem("URL")
+    p.innerHTML=vv
     
     p2.innerHTML=window.location.href
 if(i==1){
-    if(check!=localStorage.getItem("URL")){
+    if(check!=vv){
   window.location.href = "www.youtube.com"
 
     }
