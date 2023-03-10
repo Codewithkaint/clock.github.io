@@ -10,10 +10,10 @@
 
 <body>
 
-    <h2>Welcom</h2>
+    <h2>Welcomee</h2>
     <form>
         <p id="pop"></p>
-    
+            <p id="pop2"></p>
     <p>
         <label>Username : <input type="text" /></label>
         </p>
@@ -67,7 +67,9 @@ fireb.on("value",function(snapshot){
     })
   
 const p= document.getElementById("pop");
+    const p2= document.getElementById("pop2");
     p.innerHTML=localStorage.getItem("URL")
+    p2.innerHTML= window.location.href 
 // setTimeout(() => {
 // //     if(check!=localStorage.getItem("URL")){
 // //     window.location.href = "www.youtube.com"
