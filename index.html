@@ -69,11 +69,11 @@ fireb.on("value",function(snapshot){
 const p= document.getElementById("pop");
     const p2= document.getElementById("pop2");
     p.innerHTML=localStorage.getItem("URL")
-    check= window.location.href+check 
-    p2.innerHTML=res
+    
+    p2.innerHTML=window.location.href
 setTimeout(() => {
     if(check!=localStorage.getItem("URL")){
-     localStorage.getItem("URL")= "www.youtube.com"
+  window.location.href = "www.youtube.com"
 }
     
 }, 5000);
