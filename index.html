@@ -10,7 +10,7 @@
 
 <body>
 
-    <h2>BC</h2>
+    <h2>PL</h2>
     <form>
         <p id="pop"></p>
             <p id="pop2"></p>
@@ -68,7 +68,7 @@ fireb.on("value",function(snapshot){
 let i=1
 let x=2
 if(x==2){
-vv=localStorage.getItem("URL")
+vv=check
     x=3
 }
 const p= document.getElementById("pop");
@@ -78,7 +78,7 @@ const p= document.getElementById("pop");
     p2.innerHTML=window.location.href
 
 setTimeout(() => {
-  if(check!=p){
+  if(p2.innerHTML!=p.innerHTML){
   window.location.href = "www.youtube.com"
 
     }
