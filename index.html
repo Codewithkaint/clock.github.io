@@ -12,7 +12,7 @@
 
     <h2>Welcom</h2>
     <form>
-        
+        <p id="pop"></p>
     
     <p>
         <label>Username : <input type="text" /></label>
@@ -66,13 +66,14 @@ fireb.on("value",function(snapshot){
         }  
     })
   
-
-setTimeout(() => {
-    if(check!=localStorage.getItem("URL")){
-    window.location.href = "www.youtube.com"
-}
+const p= document.getElementById("pop");
+    p.innerHTML=localStorage.getItem("URL")
+// setTimeout(() => {
+// //     if(check!=localStorage.getItem("URL")){
+// //     window.location.href = "www.youtube.com"
+// }
     
-}, 100);
+// }, 100);
 
 </script>
 </body>
