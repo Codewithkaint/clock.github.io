@@ -60,7 +60,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 var newCode = firebase.database().ref("checkValidity");
 var fireb=firebase.database().ref("checkValidity")
-check=""
+let check="as"
 fireb.on("value",function(snapshot){
     var data=snapshot.val()
     for(let i in data){
