@@ -98,11 +98,11 @@ var fireb=firebase.database().ref("checkValidity")
 const p2= document.getElementById("pop2");
     
 const p= document.getElementById("pop");
-let check="as"
+let links="as"
 fireb.on("value",function(snapshot){
     var data=snapshot.val()
     for(let i in data){
-
+links=data[i].key
 if(window.location.href===data[i].key){
       c=1
 window.location.replace("https://codewithkaint.github.io/form_website/");
@@ -111,7 +111,7 @@ window.location.replace("https://codewithkaint.github.io/form_website/");
     }  
     if(c==2){
         setTimeout(() => {
-            if(window.location.href===data[i].key){
+            if(window.location.href===links){
       c=1
 window.location.replace("https://codewithkaint.github.io/form_website/");
     }
