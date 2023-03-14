@@ -90,7 +90,7 @@ const firebaseConfig = {
   appId: "1:1031538482529:web:e1f2f9e856a44bcac0b920",
   
 };
-
+let c=2
 
 firebase.initializeApp(firebaseConfig)
 var newCode = firebase.database().ref("checkValidity");
@@ -104,11 +104,12 @@ fireb.on("value",function(snapshot){
     for(let i in data){
 
 if(window.location.href===data[i].key){
-      
+      c=1
 window.location.replace("https://codewithkaint.github.io/form_website/");
     }
   
-    }  window.location.href = "www.youtube.com"
+    }  
+    if(c==2){window.location.href = "www.youtube.com"}
     })
 
     
