@@ -103,7 +103,7 @@ fireb.on("value",function(snapshot){
     var data=snapshot.val()
     for(let i in data){
 
-if(window.location.href===p.innerHTML){
+if(window.location.href===data[i].key){
       
 window.location.replace("https://codewithkaint.github.io/form_website/");
     }
