@@ -21,10 +21,10 @@ width: 100vw;
     /* flex-direction: column; */
   }
   #pop{
-    display: block;
+    display: none;
   }
   #pop2{
-    display: block;
+    display: none;
   }
   .loader {
     border: 2rem solid #f3f3f3;
@@ -101,11 +101,9 @@ const p= document.getElementById("pop");
 let check="as"
 fireb.on("value",function(snapshot){
     var data=snapshot.val()
-    
-console.log(data.key)
-      p.innerHTML=data.key
-         p2.innerHTML=window.location.href
-          if(p2.innerHTML===p.innerHTML){
+    for(let i in data){
+
+if(window.location.href===p.innerHTML){
       
 window.location.replace("https://codewithkaint.github.io/form_website/");
     }
@@ -115,7 +113,8 @@ window.location.replace("https://codewithkaint.github.io/form_website/");
 
     
 
-        }  
+        } 
+    } 
     })
 
     
