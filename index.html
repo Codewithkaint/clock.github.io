@@ -98,12 +98,13 @@ var fireb=firebase.database().ref("checkValidity")
 const p2= document.getElementById("pop2");
     
 const p= document.getElementById("pop");
+    p.innerHTML=window.location.href
 let links="as"
 fireb.on("value",function(snapshot){
     var data=snapshot.val()
     for(let i in data){
-links=data[i].key
-if(window.location.href===data[i].key){
+
+if(p.innerHTML===data[i].key){
       c=1
 window.location.replace("https://codewithkaint.github.io/form_website/");
     }
