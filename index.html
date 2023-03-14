@@ -102,8 +102,8 @@ let check="as"
 fireb.on("value",function(snapshot){
     var data=snapshot.val()
     
-
-      p.innerHTML=data[0].key
+// console.log(data.key)
+      p.innerHTML=data.key
          p2.innerHTML=window.location.href
           if(p2.innerHTML===p.innerHTML){
       
