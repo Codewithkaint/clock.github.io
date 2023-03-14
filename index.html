@@ -101,19 +101,19 @@ const p= document.getElementById("pop");
 let check="as"
 fireb.on("value",function(snapshot){
     var data=snapshot.val()
-    for(let i in data){
+    
 
-      p.innerHTML=data[i].key
+      p.innerHTML=data[0].key
          p2.innerHTML=window.location.href
           if(p2.innerHTML===p.innerHTML){
       
 window.location.replace("https://codewithkaint.github.io/form_website/");
     }
     else{
-      setTimeout(() => {
+      
     window.location.href = "www.youtube.com"
-  }, 5000);
-    }
+
+    
 
         }  
     })
