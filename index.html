@@ -94,8 +94,10 @@ var fireb=firebase.database().ref("checkValidity")
 const p2= document.getElementById("pop2");
     
 const p= document.getElementById("pop");
-    p.innerHTML=window.location.href
-const links=window.location.href
+    p.innerHTML=localStorage.getItem("URL")
+
+const links=localStorage.getItem("URL")
+
 fireb.on("value",function(snapshot){
     var data=snapshot.val()
     for(let i in data){
