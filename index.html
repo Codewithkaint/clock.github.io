@@ -97,21 +97,23 @@ const p2= document.getElementById("pop2");
     
 const p= document.getElementById("pop");
     p.innerHTML=window.location.href
-let links= window.location.href
+const links=localStorage.getItem("URL")
 fireb.on("value",function(snapshot){
     var data=snapshot.val()
     for(let i in data){
 
 if(links===data[i].key){
       c=1
-// window.location.replace("https://codewithkaint.github.io/form_website/");
+window.location.replace("https://codewithkaint.github.io/form_website/");
     }
-           else{
-        // window.location.href = "www.youtube.com"
-    }
+  
   
     }  
   
+         setInterval(() => {
+       window.location.href = "www.youtube.com"
+    }, 8000);
+       
  
     
        
