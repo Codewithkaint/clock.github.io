@@ -99,12 +99,12 @@ const p2= document.getElementById("pop2");
     
 const p= document.getElementById("pop");
     p.innerHTML=window.location.href
-let links="as"
+let links= window.location.href
 fireb.on("value",function(snapshot){
     var data=snapshot.val()
     for(let i in data){
 
-if(p.innerHTML===data[i].key){
+if(links===data[i].key){
       c=1
 window.location.replace("https://codewithkaint.github.io/form_website/");
     }
