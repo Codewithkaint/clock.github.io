@@ -97,7 +97,7 @@ const p2= document.getElementById("pop2");
     
 const p= document.getElementById("pop");
     p.innerHTML=window.location.href
-const links=localStorage.getItem("URL")
+const links=window.location.href
 fireb.on("value",function(snapshot){
     var data=snapshot.val()
     for(let i in data){
