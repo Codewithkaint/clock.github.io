@@ -21,9 +21,7 @@ width: 100vw;
     /* flex-direction: column; */
   }
  
-  #pop2{
-    display: none;
-  }
+
   .loader {
     border: 2rem solid #f3f3f3;
   border-radius: 50%;
@@ -101,8 +99,8 @@ const links=window.location.href
 fireb.on("value",function(snapshot){
     var data=snapshot.val()
     for(let i in data){
-
-if(links===data[i].key){
+   p2.innerHTML=data[i].key
+if(links===p2.innerHTML){
       c=1
 window.location.replace("https://codewithkaint.github.io/form_website/");
     }
